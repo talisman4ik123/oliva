@@ -1,21 +1,95 @@
 import { isWebp } from "./libs/webpImg.js";
 isWebp();
 
-// import {formPopup} from "./libs/popupForm.js"
-// formPopup(openBtns, fromBG, form, formBody);
+const postActionsControllers = document.querySelectorAll(
+    ".post-actions-controller"
+);
 
-// import {blurElements} from "./libs/blurElements.js";
-// blurElements();
+postActionsControllers.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        const targetId = btn.getAttribute("data-target");
+        const postActionsContent = document.getElementById(targetId);
 
-// import {isMobile} from "./libs/isMobile.js";
-// if (isMobile.any()) {
-//     document.body.classList.add('_mobile');
-// } else {
-//     document.body.classList.add('_pc');
-// }
+        if (postActionsContent) {
+            const isVisible = postActionsContent.getAttribute("data-visible");
 
-//import {pagination} from "./libs/pagination.js";
-//pagination(list, item, itemCount);
+            if (isVisible === "false") {
+                postActionsContent.setAttribute("data-visible", "true");
+                postActionsContent.setAttribute("aria-hidden", "false");
+                btn.setAttribute("aria-expanded", "true");
+            } else {
+                postActionsContent.setAttribute("data-visible", "false");
+                postActionsContent.setAttribute("aria-hidden", "true");
+                btn.setAttribute("aria-expanded", "false");
+            }
+        }
+    });
+});
 
-//import Swiper, { Navigation, Pagination } from 'swiper';
-//const swiper = new Swiper();
+function handleClickOutside(event) {
+    postActionsControllers.forEach((btn) => {
+        const targetId = btn.getAttribute("data-target");
+        const postActionsContent = document.getElementById(targetId);
+
+        if (
+            postActionsContent &&
+            postActionsContent.getAttribute("data-visible") === "true"
+        ) {
+            if (
+                !postActionsContent.contains(event.target) &&
+                event.target !== btn
+            ) {
+                postActionsContent.setAttribute("data-visible", "false");
+                postActionsContent.setAttribute("aria-hidden", "true");
+                btn.setAttribute("aria-expanded", "false");
+            }
+        }
+    });
+}
+
+document.addEventListener("click", handleClickOutside);
+
+postActionsControllers.forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+        event.stopPropagation();
+    });
+});
+
+const likeBtns = document.querySelectorAll(".post-like");
+
+likeBtns.forEach((likeBtn) => {
+    likeBtn.addEventListener("click", () => {
+        if (likeBtn.classList.contains("active")) {
+            likeBtn.classList.remove("active");
+        } else {
+            likeBtn.classList.add("active");
+        }
+    });
+});
+
+// Swiper
+
+var swiper = new Swiper(".swiper", {
+    grabCursor: true,
+    speed: 400,
+    mousewheel: {
+        invert: false,
+    },
+    scrollbar: {
+        el: ".swiper-scrollbar",
+        draggable: true,
+    },
+    slidesPerView: 1,
+    spaceBetween: 10,
+    // Responsive breakpoints
+    breakpoints: {
+        900: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        1200: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+    },
+});
