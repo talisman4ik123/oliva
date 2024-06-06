@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+"title":"Напитки"
+})
+
+<body>
+    @@include('html/header.html',{})
+    <main class="main">
+        <section class="potables">
+            <div class="potables__container">
+                <div class="potables__inner">
+                    <h2 class="popular__title">Напитки</h2>
+                    <ul class="popular__list">
+                        <li class="popular__item">
+                            <img src="images/potables/cola025.webp" alt="изображение стеклянной кока-колы" class="popular__img">
+                            <div class="popular__box">
+                                <span class="popular__caption">Кока-кола(стекло)</span>
+                                <p class="popular__compound">Описание: Напиток газированный</p>
+                                <p class="popular__weight">Объём: 0,25л.</p>
+                                <div class="popular__subbox">
+                                    <span class="popular__price">1,9 руб.</span>
+                                    <button class="popular__button">в корзину</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="popular__item">
+                            <img src="images/potables/cola033.jpg" alt="Изображение банки кока-колы" class="popular__img">
+                            <div class="popular__box">
+                                <span class="popular__caption">Кока-кола(банка)</span>
+                                <p class="popular__compound">Описание: Напиток газированный</p>
+                                <p class="popular__weight">Объём: 0,33л.</p>
+                                <div class="popular__subbox">
+                                    <span class="popular__price">2 руб.</span>
+                                    <button class="popular__button">в корзину</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="popular__item">
+                            <img src="images/potables/cola05.jpg" alt="Изображение кока-колы" class="popular__img">
+                            <div class="popular__box">
+                                <span class="popular__caption">Кока-кола</span>
+                                <p class="popular__compound">Описание: Напиток газированный</p>
+                                <p class="popular__weight">Объём: 0,5л.</p>
+                                <div class="popular__subbox">
+                                    <span class="popular__price">2,8 руб.</span>
+                                    <button class="popular__button">в корзину</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="popular__item">
+                            <img src="images/potables/cola1.jpg" alt="Изображение кока-колы" class="popular__img">
+                            <div class="popular__box">
+                                <span class="popular__caption">Кока-кола</span>
+                                <p class="popular__compound">Описание: Напиток газированный</p>
+                                <p class="popular__weight">Объём: 1л.</p>
+                                <div class="popular__subbox">
+                                    <span class="popular__price">4 руб.</span>
+                                    <button class="popular__button">в корзину</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="popular__item">
+                            <img src="images/potables/dobrii.jpg" alt="Изображение сока добрый" class="popular__img">
+                            <div class="popular__box">
+                                <span class="popular__caption">Сок Добрый</span>
+                                <p class="popular__compound">Вкусы: Яблочный, Томатный, Абрикос, Томатный, Персик-Яблоко Березовый, Мультифрукт.</p>
+                                <p class="popular__weight">Объём: 1л.</p>
+                                <div class="popular__subbox">
+                                    <span class="popular__price">4,5 руб.</span>
+                                    <button class="popular__button">в корзину</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="popular__item">
+                            <img src="images/potables/rich.jpg" alt="Изображение сока rich" class="popular__img">
+                            <div class="popular__box">
+                                <span class="popular__caption">Сок Rich</span>
+                                <p class="popular__compound">Вкусы: Грейпфрут.</p>
+                                <p class="popular__weight">Объём: 1л.</p>
+                                <div class="popular__subbox">
+                                    <span class="popular__price">5 руб.</span>
+                                    <button class="popular__button">в корзину</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    @@include('html/footer.html',{})
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+"title":"Десерты"
+})
+
+<body>
+    @@include('html/header.html',{})
+    <main class="main">
+        <section class="potables">
+            <div class="potables__container">
+                <div class="potables__inner">
+                    <h2 class="popular__title">Десерты</h2>
+                    <ul class="popular__list">
+                        <li class="popular__item">
+                            <img src="images/dessert/medovik.jpg" alt="изображение торта медовик" class="popular__img">
+                            <div class="popular__box">
+                                <span class="popular__caption">Торт медовик по-домашнему</span>
+                                <p class="popular__compound">Описание: -</p>
+                                <p class="popular__weight">Вес: 0,14кг.</p>
+                                <div class="popular__subbox">
+                                    <span class="popular__price">5 руб.</span>
+                                    <button class="popular__button">в корзину</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="popular__item">
+                            <img src="images/dessert/traifl.webp" alt="изображение трайфл" class="popular__img">
+                            <div class="popular__box">
+                                <span class="popular__caption">Трайфл</span>
+                                <p class="popular__compound">Описание: -</p>
+                                <p class="popular__weight">Вес: 0,15кг.</p>
+                                <div class="popular__subbox">
+                                    <span class="popular__price">5 руб.</span>
+                                    <button class="popular__button">в корзину</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="popular__item">
+                            <img src="images/dessert/napoleon.jpg" alt="изображение торта наполеон" class="popular__img">
+                            <div class="popular__box">
+                                <span class="popular__caption">Пирожное наполеон</span>
+                                <p class="popular__compound">-</p>
+                                <p class="popular__weight">Вес: 0,15кг.</p>
+                                <div class="popular__subbox">
+                                    <span class="popular__price">5,5 руб.</span>
+                                    <button class="popular__button">в корзину</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="popular__item">
+                            <img src="images/dessert/profitrol.jpg" alt="изображение торта медовик" class="popular__img">
+                            <div class="popular__box">
+                                <span class="popular__caption">Профитроли с заварным кремом в шоколаде</span>
+                                <p class="popular__compound">Описание: -</p>
+                                <p class="popular__weight">Вес: -</p>
+                                <div class="popular__subbox">
+                                    <span class="popular__price">5 руб.</span>
+                                    <button class="popular__button">в корзину</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="popular__item">
+                            <img src="images/dessert/strudel.jpg" alt="Изображение штрудель" class="popular__img">
+                            <div class="popular__box">
+                                <span class="popular__caption">Штрудель</span>
+                                <p class="popular__compound">Состав: слоеное тесто, яблоко, изюм, лимон, миндаль, корица, сахарная пудра, мята, мороженое, соус сливочный, соус киви.</p>
+                                <p class="popular__weight">Вес: 0.17кг.</p>
+                                <div class="popular__subbox">
+                                    <span class="popular__price">5 руб.</span>
+                                    <button class="popular__button">в корзину</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    @@include('html/footer.html',{})
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.min.js"></script>
+</body>
+
+</html>
