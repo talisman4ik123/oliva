@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+"title":"Салаты"
+})
+
+<body>
+    @@include('html/header.html',{})
+    <main class="main">
+        <section class="potables">
+            <div class="potables__container">
+                <div class="potables__inner">
+                    <h2 class="popular__title">Салаты</h2>
+                    <ul class="popular__list">
+                        <li class="popular__item">
+                            <img src="images/salats/polo.jpg" alt="изображение салата поло" class="popular__img">
+                            <div class="popular__box">
+                                <span class="popular__caption">Салат Поло</span>
+                                <p class="popular__compound">Описание: филе курицы, шампиньоны, кукуруза, гренки, помидор, соус пикантный.</p>
+                                <p class="popular__weight">Вес: 0,19кг.</p>
+                                <div class="popular__subbox">
+                                    <span class="popular__price">10,5 руб.</span>
+                                    <button class="popular__button">в корзину</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="popular__item">
+                            <img src="images/salats/salatgovyd.jpg" alt="изображение Салата с говядиной" class="popular__img">
+                            <div class="popular__box">
+                                <span class="popular__caption">Салат с говядиной</span>
+                                <p class="popular__compound">Описание: говядина, грудинка, лист салата, огурец свежий, помидор свежий, перец свежий, кунжут, соус ницца.</p>
+                                <p class="popular__weight">Вес: 0,19кг.</p>
+                                <div class="popular__subbox">
+                                    <span class="popular__price">13,5 руб.</span>
+                                    <button class="popular__button">в корзину</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="popular__item">
+                            <img src="images/salats/grecheskii.jpg" alt="изображение Салата Греческий" class="popular__img">
+                            <div class="popular__box">
+                                <span class="popular__caption">Салат Греческий</span>
+                                <p class="popular__compound">Описание: огурец, помидор, сыр фету, салат св, маслины, перец св, соус греческий, зелень.</p>
+                                <p class="popular__weight">Вес: 0,27кг.</p>
+                                <div class="popular__subbox">
+                                    <span class="popular__price">14 руб.</span>
+                                    <button class="popular__button">в корзину</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="popular__item">
+                            <img src="images/salats/tomativylenii.jpg" alt="изображение Салата с вяленными томатами" class="popular__img">
+                            <div class="popular__box">
+                                <span class="popular__caption">Салат с вяленными томатами</span>
+                                <p class="popular__compound">Описание: помидоры черри, вяленный томат, огурец свежий, лист салата, сыр рассольный, пармезан.</p>
+                                <p class="popular__weight">Вес: 0,2кг.</p>
+                                <div class="popular__subbox">
+                                    <span class="popular__price">14,5 руб.</span>
+                                    <button class="popular__button">в корзину</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="popular__item">
+                            <img src="images/salats/cezar.webp" alt="изображение Салата Цезарь с курицей" class="popular__img">
+                            <div class="popular__box">
+                                <span class="popular__caption">Салат Цезарь с курицей</span>
+                                <p class="popular__compound">Описание: салат айсберг, лист салата, помидор, курица гриль, гренки сыр твердый,  итальянский соус "Цезарь", яйцо.</p>
+                                <p class="popular__weight">Вес: 0,31кг.</p>
+                                <div class="popular__subbox">
+                                    <span class="popular__price">14,5 руб.</span>
+                                    <button class="popular__button">в корзину</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="popular__item">
+                            <img src="images/salats/salatyazik.jpg" alt="изображение Салата с маринованными опятами и языком говяжьим с бальзамической заправкой" class="popular__img">
+                            <div class="popular__box">
+                                <span class="popular__caption">Салат с маринованными опятами и языком говяжьим с бальзамической заправкой</span>
+                                <p class="popular__compound">Описание: Салат смесь, помидоры черри, огурец маринованный, бекон, опята маринованные, язык отварной, каперсы, соус.</p>
+                                <p class="popular__weight">Вес: 0,21кг.</p>
+                                <div class="popular__subbox">
+                                    <span class="popular__price">15 руб.</span>
+                                    <button class="popular__button">в корзину</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="popular__item">
+                            <img src="images/salats/cezarsemga.jpg" alt="изображение Салата Цезарь с сёмгой «гриль»" class="popular__img">
+                            <div class="popular__box">
+                                <span class="popular__caption">Салат Цезарь с сёмгой «гриль»</span>
+                                <p class="popular__compound">Описание: салат айсберг, лист салата, помидор, сёмга, гренки сыр твердый,  итальянский соус "Цезарь", яйцо.</p>
+                                <p class="popular__weight">Вес: 0,31кг.</p>
+                                <div class="popular__subbox">
+                                    <span class="popular__price">16,5 руб.</span>
+                                    <button class="popular__button">в корзину</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    @@include('html/footer.html',{})
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.min.js"></script>
+</body>
+
+</html>

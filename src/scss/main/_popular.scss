@@ -42,15 +42,19 @@
 .popular__item {
     max-width: 360px;
     margin: 30px 20px;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    //box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
     background: #2d2c2c;
     border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(79, 230, 139, 1),
+-20px 0 20px -23px rgba(79, 230, 139, .8),
+20px 0 20px -23px rgba(79, 230, 139, .8),
+0 0 40px rgba(79, 230, 139, .1);
 }
 
 .popular__img {
-    width: 380px;
-    height: 226px;
-    margin-bottom: 15px;
+    @include adaptiveValue("width", 380, 250);
+    @include adaptiveValue("height", 226, 190);
+    @include adaptiveValue("margin-bottom", 15, 0);
 }
 
 .popular__box {
@@ -61,16 +65,16 @@
     display: block;
     font-family: "Alegreya";
     font-weight: 500;
-    font-size: 20px;
+    @include adaptiveValue("font-size", 20, 15);
     letter-spacing: 1.2px;
-    margin-bottom: 20px;
+    @include adaptiveValue("margin-bottom", 20, 12);
     color: #fff;
 }
 
 .popular__compound {
     font-family: "Montserrat";
     font-weight: 400;
-    font-size: 12px;
+    @include adaptiveValue("font-size", 12, 10);
     color: #b3b3b3;
     margin-bottom: 24px;
 }
@@ -80,27 +84,31 @@
     font-weight: 400;
     font-size: 12px;
     color: #b3b3b3;
-    margin-bottom: 24px;
+    @include adaptiveValue("margin-bottom", 24, 5);
 }
 
 .popular__subbox {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .popular__price {
     font-family: "OpenSans";
     font-weight: 600;
-    font-size: 24px;
+    //@include adaptiveValue("margin-bottom", 24, 18);
     color: #32d74b;
 }
 
 .popular__button {
     font-weight: 500;
-    font-size: 12px;
+    @include adaptiveValue("font-size", 12, 10);
     text-transform: uppercase;
     text-align: center;
-    padding: 10px 20px;
+    @include adaptiveValue("padding-top", 10, 7);
+    @include adaptiveValue("padding-bottom", 10, 7);
+    @include adaptiveValue("padding-left", 20, 16);
+    @include adaptiveValue("padding-right", 20, 16);
     background-color: #34C759;
     border-radius: 20px;
 }

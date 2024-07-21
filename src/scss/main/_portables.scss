@@ -18,19 +18,36 @@
     border: 1px solid white;
 }
 
-.popular__img {
+.pizza-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
 }
-.popular__box {
-}
-.popular__caption {
-}
-.popular__compound {
-}
-.popular__weight {
-}
-.popular__subbox {
-}
-.popular__price {
-}
-.popular__button {
+
+.pizza {
+    &__weight {
+        font-family: "Alegreya";
+        font-weight: 500;
+        font-size: 16px;
+        color: #b3b3b3;
+    }
+
+    &__price {
+        font-family: "Alegreya";
+        font-weight: 500;
+        font-size: 24px;
+        color: #32d74b;
+    }
+
+    &__button {
+        background-color: transparent;
+        border: 1px solid #32d74b;
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: #32d74b;
+        font-size: 16px;
+    }
 }

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+"title":"Супы"
+})
+
+<body>
+    @@include('html/header.html',{})
+    <main class="main">
+        <section class="potables">
+            <div class="potables__container">
+                <div class="potables__inner">
+                    <h2 class="popular__title">Супы</h2>
+                    <ul class="popular__list">
+                        <li class="popular__item">
+                            <img src="images/sups/borshhukrainskiy.jpg" alt="изображение Борща по украински" class="popular__img">
+                            <div class="popular__box">
+                                <span class="popular__caption">Борщ по украински</span>
+                                <p class="popular__compound">Описание: классический борщ с гренками и соленым шпиком.</p>
+                                <p class="popular__weight">Вес: 0,3кг.</p>
+                                <div class="popular__subbox">
+                                    <span class="popular__price">5 руб.</span>
+                                    <button class="popular__button">в корзину</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="popular__item">
+                            <img src="images/sups/solunka.jpg" alt="изображение Солянки" class="popular__img">
+                            <div class="popular__box">
+                                <span class="popular__caption">Солянка</span>
+                                <p class="popular__compound">Описание: классическая мясная солянка.</p>
+                                <p class="popular__weight">Вес: 0,28кг.</p>
+                                <div class="popular__subbox">
+                                    <span class="popular__price">6 руб.</span>
+                                    <button class="popular__button">в корзину</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="popular__item">
+                            <img src="images/sups/borjrebra.jpg" alt="изображение Борщ свекольный со свиными ребрами" class="popular__img">
+                            <div class="popular__box">
+                                <span class="popular__caption">Борщ свекольный со свиными ребрами</span>
+                                <p class="popular__compound">Описание: борщ свекольный со свиными ребрами.</p>
+                                <p class="popular__weight">Вес: 0,35кг.</p>
+                                <div class="popular__subbox">
+                                    <span class="popular__price">6 руб.</span>
+                                    <button class="popular__button">в корзину</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="popular__item">
+                            <img src="images/sups/gribnoisup.jpg" alt="изображение Суп пюре грибной" class="popular__img">
+                            <div class="popular__box">
+                                <span class="popular__caption">Суп пюре грибной</span>
+                                <p class="popular__compound">Описание: шампиньоны, картофельные сливки, сыр, специи.</p>
+                                <p class="popular__weight">Вес: 0,2кг.</p>
+                                <div class="popular__subbox">
+                                    <span class="popular__price">7 руб.</span>
+                                    <button class="popular__button">в корзину</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    @@include('html/footer.html',{})
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.min.js"></script>
+</body>
+
+</html>
