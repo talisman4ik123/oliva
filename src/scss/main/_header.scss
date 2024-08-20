@@ -1,0 +1,149 @@
+.header {
+	position: relative;
+}
+.header-top {
+	position: fixed;
+	background-color: rgba(37, 37, 37, 0.75);
+	top: 0;
+	left: 0;
+	width: 100%;
+	@include adaptiveValue("padding-top", 27, 15);
+	@include adaptiveValue("padding-bottom", 27, 15);
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+.logo {
+
+	&__link {
+		display: flex;
+		align-items: flex-end;
+	}
+
+	&__img {
+		@include adaptiveValue("max-width", 31, 28);
+		@include adaptiveValue("max-height", 31, 28);
+		margin-right: 6px;
+	}
+
+	&__caption {
+		font-family: "Alegreya";
+		font-weight: 400;
+		@include adaptiveValue("font-size", 24, 18);
+		text-transform: uppercase;
+		color: #34C759;
+		line-height: 20px;
+	}
+}
+.menu {
+
+	@media (max-width: 850px) {
+		display: none;
+	}
+
+	&__link {
+		font-family: "Alegreya";
+		font-weight: 500;
+		font-size: 16px;
+		color: #fff;
+		letter-spacing: 2px;
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		padding-left: 10px;
+		padding-right: 10px;
+		justify-content: center;
+	}
+
+	&__item {
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+
+	&__item:not(:last-child) {
+		margin-right: 20px;
+	}
+}
+
+.submenu {
+	// .submenu__list
+
+	&__list {
+		display: flex;
+	}
+
+	// .submenu__item
+
+	&__item {
+		@include adaptiveValue("max-width", 35, 28);
+		@include adaptiveValue("max-height", 35, 28);
+		background-color: rgba(255, 255, 255, 0);
+		padding: 5px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 5px;
+		border: 2px solid #34C759;
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+
+	@media (max-width: 850px) {
+		margin-left: auto;
+	}
+}
+
+.burger {
+	display: none;
+
+	&__span {
+		display: block;
+		width: 30px;
+		height: 2px;
+		background-color: #34C759;
+		will-change: transform;
+		transition: transform .4s ease, -webkit-transform .4s ease;
+		border-radius: 4px;
+
+		&:nth-child(2) {
+			width: 20px;
+			transition: transform .3s ease;
+		}
+
+		&:nth-child(3) {
+			width: 10px;
+			transition: width, transform .4s;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 5px;
+		}
+	}
+
+	&--active {
+		.burger__span {
+			&:first-child {
+				transform: translateY(7px) rotate(45deg);
+			}
+			&:nth-child(2) {
+				transform: translateX(100px);
+			}
+			&:last-child {
+				transform: translateY(-7px) rotate(-45deg);
+				width: 100%;
+			}
+		}
+	}
+
+	@media (max-width: 850px) {
+		display: flex;
+		flex-direction: column;
+		margin-left: 15px;
+	}
+}
